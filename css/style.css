@@ -1,0 +1,416 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F0F8FF;
+    color: #234B70;
+    line-height: 1.7;
+}
+
+/* =====================================
+   CABEÇALHO E MENU
+   ===================================== */
+
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 18px 8%;
+    box-shadow: 0 3px 12px rgba(35, 75, 112, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #397FB5;
+    text-decoration: none;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: #234B70;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu ul a:hover {
+    color: #559DD6;
+}
+
+/* =====================================
+   SEÇÃO INICIAL
+   ===================================== */
+
+.inicio {
+    min-height: 540px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #DFF2FF,
+        #B9E2FA,
+        #F0F8FF
+    );
+}
+
+.apresentacao {
+    flex: 1;
+    max-width: 570px;
+}
+
+.subtitulo {
+    color: #559DD6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.apresentacao h1 {
+    font-size: clamp(32px, 5vw, 49px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+    color: #234B70;
+}
+
+.apresentacao p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.imagem-inicio {
+    flex: 1;
+    max-width: 540px;
+}
+
+.imagem-inicio img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(35, 75, 112, 0.18);
+}
+
+
+.botao {
+    display: inline-block;
+    background-color: #559DD6;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 13px 27px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #397FB5;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(35, 75, 112, 0.18);
+}
+
+/* =====================================
+   SEÇÕES E TÍTULOS
+   ===================================== */
+
+.nuvens,
+.curiosidades,
+.quiz {
+    padding: 80px 8%;
+}
+
+.titulo-secao {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(27px, 4vw, 36px);
+    color: #234B70;
+    margin-bottom: 15px;
+}
+
+.titulo-secao > p:last-child {
+    color: #56738C;
+}
+
+/* =====================================
+   CARTÕES DOS TIPOS DE NUVENS
+   ===================================== */
+
+.lista-nuvens {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.card-nuvem {
+    background-color: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(35, 75, 112, 0.09);
+    transition: 0.3s;
+}
+
+.card-nuvem:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(35, 75, 112, 0.16);
+}
+
+.card-nuvem img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.conteudo-card {
+    padding: 23px;
+}
+
+.conteudo-card h3 {
+    color: #397FB5;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.conteudo-card p {
+    color: #56738C;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.conteudo-card span {
+    display: inline-block;
+    background-color: #E3F3FF;
+    color: #397FB5;
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* =====================================
+   CURIOSIDADES
+   ===================================== */
+
+.curiosidades {
+    background: linear-gradient(135deg, #DFF2FF, #EDF8FF);
+}
+
+.curiosidades ul {
+    max-width: 850px;
+    margin: auto;
+    list-style: none;
+}
+
+.curiosidades li {
+    background-color: white;
+    padding: 20px 25px;
+    margin-bottom: 16px;
+    border-radius: 13px;
+    box-shadow: 0 3px 12px rgba(35, 75, 112, 0.06);
+    color: #56738C;
+}
+
+.curiosidades strong {
+    color: #397FB5;
+}
+
+/* =====================================
+   QUIZ E FORMULÁRIO
+   ===================================== */
+
+.quiz {
+    background-color: #F0F8FF;
+}
+
+.quiz form {
+    background-color: white;
+    max-width: 550px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(35, 75, 112, 0.10);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 9px;
+    color: #234B70;
+}
+
+.campo input {
+    padding: 13px 15px;
+    border: 2px solid #D6EAF8;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.campo input:focus {
+    border-color: #559DD6;
+    box-shadow: 0 0 0 3px rgba(85, 157, 214, 0.12);
+}
+
+.quiz button {
+    width: 100%;
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#resultado:empty {
+    display: none;
+}
+
+/* =====================================
+   RODAPÉ
+   ===================================== */
+
+footer {
+    background-color: #234B70;
+    color: white;
+    text-align: center;
+    padding: 30px 8%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* =====================================
+   RESPONSIVIDADE - TABLETS
+   ===================================== */
+
+@media (max-width: 900px) {
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .apresentacao {
+        max-width: 700px;
+    }
+
+    .imagem-inicio {
+        width: 100%;
+    }
+
+    .lista-nuvens {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* =====================================
+   RESPONSIVIDADE - CELULARES
+   ===================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    .menu ul a {
+        font-size: 13px;
+    }
+
+    .inicio {
+        padding: 55px 6%;
+        gap: 30px;
+    }
+
+    .apresentacao h1 {
+        font-size: 32px;
+    }
+
+    .apresentacao p {
+        font-size: 15px;
+    }
+
+    .imagem-inicio img {
+        height: 230px;
+    }
+
+    .nuvens,
+    .curiosidades,
+    .quiz {
+        padding: 55px 6%;
+    }
+
+    .lista-nuvens {
+        grid-template-columns: 1fr;
+    }
+
+    .card-nuvem img {
+        height: 220px;
+    }
+
+    .quiz form {
+        padding: 23px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 27px;
+    }
+
+    footer {
+        padding: 25px 6%;
+    }
+
+}
