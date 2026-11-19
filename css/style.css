@@ -414,3 +414,17 @@ footer p {
     }
 
 }
+
+/* Mensagem de envio correto */
+#resultado.sucesso {
+    background-color: #E2F5E8;
+    color: #247A45;
+    border: 1px solid #A9DDB9;
+}
+
+/* Mensagem de erro */
+#resultado.erro {
+    background-color: #FDEAEA;
+    color: #B83232;
+    border: 1px solid #F1B5B5;
+}

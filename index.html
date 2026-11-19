@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dicionário de Nuvens</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
         <nav class="menu">
-            <a href="#inicio" class="logo">Cloud Atlas ☁</a>
+            <a href="#inicio" class="logo">Dicionário de Nuvens ☁</a>
 
             <ul>
                 <li><a href="#inicio">Início</a></li>
@@ -44,7 +44,7 @@
             </div>
 
             <div class="imagem-inicio">
-                <img src="ceu-inicial.jfif"
+                <img src="img/ceu-inicial.jfif"
                      alt="Céu azul com nuvens brancas e volumosas">
             </div>
 
@@ -69,7 +69,7 @@
 
                 <!-- Cumulus -->
                 <article class="card-nuvem">
-                    <img src="cumulus.jpg"
+                    <img src="img/cumulus.jpg"
                          alt="Nuvem Cumulus branca com aparência de algodão">
 
                     <div class="conteudo-card">
@@ -88,7 +88,7 @@
 
                 <!-- Stratus -->
                 <article class="card-nuvem">
-                    <img src="stratus.jfif"
+                    <img src="img/stratus.jfif"
                          alt="Nuvens Stratus formando uma camada cinzenta no céu">
 
                     <div class="conteudo-card">
@@ -106,7 +106,7 @@
 
                 <!-- Cirrus -->
                 <article class="card-nuvem">
-                    <img src="cirrus.jpg"
+                    <img src="img/cirrus.jpg"
                          alt="Nuvens Cirrus finas e alongadas no céu azul">
 
                     <div class="conteudo-card">
@@ -124,7 +124,7 @@
 
                 <!-- Cumulonimbus -->
                 <article class="card-nuvem">
-                    <img src="cumulonimbus.jfif"
+                    <img src="img/cumulonimbus.jfif"
                          alt="Grande nuvem Cumulonimbus associada a tempestades">
 
                     <div class="conteudo-card">
@@ -142,7 +142,7 @@
 
                 <!-- Altocumulus -->
                 <article class="card-nuvem">
-                    <img src="altocumulus.jpg"
+                    <img src="img/altocumulus.jpg"
                          alt="Nuvens Altocumulus em pequenos grupos arredondados">
 
                     <div class="conteudo-card">
@@ -160,7 +160,7 @@
 
                 <!-- Nimbostratus -->
                 <article class="card-nuvem">
-                    <img src="nimbostratus.jfif"
+                    <img src="img/nimbostratus.jfif"
                          alt="Nuvens Nimbostratus espessas e escuras">
 
                     <div class="conteudo-card">
@@ -218,66 +218,40 @@
         </section>
 
 
-        <!-- Seção do quiz -->
-        <section id="quiz" class="quiz">
+ <section id="quiz" class="quiz">
 
-            <div class="titulo-secao">
-                <p class="subtitulo">TESTE SEUS CONHECIMENTOS</p>
-                <h2>Desafio das Nuvens</h2>
+    <div class="titulo-secao">
+        <p class="subtitulo">TESTE SEUS CONHECIMENTOS</p>
+        <h2>Desafio das Nuvens</h2>
 
-                <p>
-                    Você já conhece um pouco mais sobre as nuvens?
-                    Responda ao formulário e descubra seu desempenho!
-                </p>
-            </div>
+        <p>
+            Descubra o quanto você aprendeu sobre o universo
+            das nuvens. Responda às perguntas e confira seu resultado!
+        </p>
+    </div>
 
-            <form id="formQuiz">
+    <div class="quiz-container">
 
-                <div class="campo">
-                    <label for="totalPerguntas">
-                        Quantas perguntas você respondeu?
-                    </label>
+        <p id="quizProgresso">Pergunta 1 de 5</p>
 
-                    <input
-                        type="number"
-                        id="totalPerguntas"
-                        name="totalPerguntas"
-                        min="1"
-                        step="1"
-                        placeholder="Exemplo: 10"
-                        required
-                    >
-                </div>
+        <h3 id="quizPergunta"></h3>
 
-                <div class="campo">
-                    <label for="acertos">
-                        Quantas perguntas você acertou?
-                    </label>
+        <div id="quizAlternativas"></div>
 
-                    <input
-                        type="number"
-                        id="acertos"
-                        name="acertos"
-                        min="0"
-                        step="1"
-                        placeholder="Exemplo: 8"
-                        required
-                    >
-                </div>
+        <button type="button" id="btnProxima" class="botao" disabled>
+            Próxima pergunta
+        </button>
 
-                <button type="submit" class="botao">
-                    Calcular resultado
-                </button>
+        <div id="quizResultado" role="status" aria-live="polite"></div>
 
-                <!-- Área destinada às mensagens do JavaScript -->
-                <div id="resultado"
-                     role="status"
-                     aria-live="polite">
-                </div>
+        <button type="button" id="btnReiniciar" class="botao" hidden>
+            Refazer quiz
+        </button>
 
-            </form>
+    </div>
 
-        </section>
+</section>
+
     </main>
   
     <footer>
